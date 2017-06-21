@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Level Select</title>
+    <link rel="stylesheet" href="css/imooc.css" type="text/css">
+    <script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+</head>
+<body>
+    <h2>child and descendant selector</h2>
+    <div class="left">
+        <div class="norm">
+            <p>left norm</p>
+        </div>
+        <div class="norm">
+            <p>left norm</p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="mooc">
+            <article>
+                <p>rigth mooc article</p>
+            </article>
+        </div>
+        <div class="mooc">
+            <article>
+                <p>rigth mooc article</p>
+            </article>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('div > p').css("border","1px groove red");
+       // $('div p').css("border","1px groove red");
+    </script>
+
+    <h2>prev next siblings</h2>
+    <div class="bottom">
+        <div>before prev div</div>
+        <span class="prev"> span class=prev</span>
+        <div>span next div</div>
+        <div>sibling
+            <div class="small">child div</div>
+        </div>
+        <span>sibling span</span>
+        <div>sibling div</div>
+    </div>
+    <script type="text/javascript">
+        $(".prev + div").css("border","3px groove blue");
+        $(".prev ~ div").css("border","3px groove blue");
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select ID</title>
+    <script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+    <style>
+        div {
+            width: 100px;
+            height: 90px;
+            float: left;
+            padding: 5px;
+            margin: 5px;
+            background-color: #EEEEEE;
+        }
+    </style>
+</head>
+<body>
+    <div id="norm">
+        <p>id="norm</p>
+        <p>Selected</p>
+    </div>
+    <div id="mooc">
+        <p>id="mooc"</p>
+        <p>jQuery Selected</p>
+    </div>
+
+    <script type="text/javascript">
+        var div = document.getElementById('norm');
+        div.style.border = "3px solid blue";
+        // jQuery select
+        $("#mooc").css("border", "3px solid red");
+    </script>
+
+    <div class="normal">
+        <p>class="normal"</p>
+        <p>JS selected</p>
+    </div>
+    <div class="normal">
+        <p>class="normal"</p>
+        <p>JS selected</p>
+    </div>
+    <div class="imooc">
+        <p>class="imooc"</p>
+        <p>JQuery selected</p>
+    </div>
+    <div class="imooc">
+        <p>class="imooc"</p>
+        <p>JQuery selected</p>
+    </div>
+
+    <script type="text/javascript">
+        var divs = document.getElementsByClassName('normal');
+        for (var i = 0; i < divs.length; i++){
+            divs[i].style.border = "3px solid blue";
+        }
+
+        $(".imooc").css("border", "3px solid red");
+    </script>
+
+    <script type="text/javascript">
+        //tag selector
+        $("p").css("border", "3px solid red");
+    </script>
+</body>
+</html>
